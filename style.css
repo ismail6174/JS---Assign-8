@@ -1,0 +1,102 @@
+  :root {
+      --bg: #1e1e2f;
+      --text: #ffffff;
+      --primary: #5a5ad6;
+      --secondary: #2a2a3b;
+    }
+    body.light {
+      --bg: #f0f0f0;
+      --text: white;
+      --primary: #4f9cc1;
+      --secondary: #fffff;
+
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 1rem;
+  
+    }
+    .calculator {
+      background: var(--secondary);
+      padding: 2rem;
+      border-radius: 10%;
+      box-shadow: inset 0 0 12px orange ;
+      width: 285px;
+      margin-bottom: 1rem;
+    }
+    .display-wrapper {
+      background: #3b3b5c;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: inset 0 0 6px cyan ;
+      padding: 0.5rem;
+    }
+    .expression, .result {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 1.2rem;
+      text-align: right;
+    }
+    .result {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+  
+      gap:1.5px;
+ 
+     
+    }
+    button {
+      padding: 1rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 12px;
+      background-color: var(--primary);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      filter: brightness(1.2);
+    }
+    .operator {
+      background-color: #d65a5a;
+      
+    }
+    .operator:hover {
+      background-color: #f17b7b;
+    }
+    .hidden {
+      display: none;
+    }
+    .utility {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 320px;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--secondary);
+      color: var(--text);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow:inset  0 0 22px cyan;
+      text-align: center;
+      z-index: 1000;
+    }
